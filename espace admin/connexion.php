@@ -47,16 +47,3 @@ if(isset($_POST['valider'])){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-<!-- 
-👋 Bonjour et bienvenue dans cette nouvelle vidéo ! Aujourd'hui je vais vous montrer comment créer un espace d'administration complet en PHP & MySQL avec la possibilité de se connecter en tant qu'administrateur, d'afficher les membres du site, de bannir un membre, de publier un article et de supprimer ou modifier un article !
-
-0:00 Intro
-0:50 Connexion en tant qu'admin
-10:11 Afficher les membres du site
-17:47 Bannir un membre
-26:27 Publier un article
-35:12 Supprimer un article
-49:28 Modifier un article
-1:07:22 Fin
-
--->
