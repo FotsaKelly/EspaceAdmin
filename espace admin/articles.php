@@ -12,32 +12,55 @@ if(!$_SESSION['mdp']){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial- scale=1.0">
     <title>Afficher les articles</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <?php
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="text-center">Liste des Articles</h2>
+        <?php
         $recupArticle = $bdd->query('SELECT * FROM articles');
 
-        while($article = $recupArticle->fetch()){
+        while ($article = $recupArticle->fetch()) {
             ?>
-            <div style="border: 1px solid ; ">
-                <h1><?=$article['titre'];?></h1>
-                <p><?=$article['contenu'];?></p>
-                <a href="supprimer-article.php?id=<?=$article['id']; ?>">
-                    <button>Supprimer l'article</button>
-                </a>
-                <a href="modifier-article.php?id=<?=$article['id']; ?>">
-                    <button>Modifier l'article</button>
-                </a>
-                
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title"><?=$article['titre']; ?></h5>
+                    <p class="card-text"><?=$article['contenu']; ?></p>
+                    <a href="supprimer-article.php?id=<?= $article['id']; ?>" class="btn btn-danger">Supprimer l'article</a>
+                    <a href="modifier-article.php?id=<?= $article['id']; ?>" class="btn btn-warning">Modifier l'article</a>
+                </div>
             </div>
-            <br>
-           
             <?php
-           
         }
-    ?>
-    <a href="index.php">
-            <button type="button">Retour</button>
-    </a>
+        ?>
+        <div class="text-center">
+            <a href="index.php" class="btn btn-secondary">Retour</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

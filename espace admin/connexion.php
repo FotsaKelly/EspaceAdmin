@@ -24,17 +24,28 @@ if(isset($_POST['valider'])){
         <title>Espace de connexion</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        
     </head>
-    <body>
-        <form method="POST" action=""  style="text-align: center;">
-            <input type="text" name="pseudo" autocomplete="off" >
-            <br>
-            <input type="password" name="mdp">
-            <br><br>
-            <input type="submit" name="valider">
+    <body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="text-center">Connexion à l'Espace Admin</h2>
+        <form method="POST" action="" class="border p-4 bg-white rounded shadow-sm">
+            <div class="form-group">
+                <label for="pseudo">Pseudo</label>
+                <input type="text" name="pseudo" class="form-control" id="pseudo" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="mdp">Mot de passe</label>
+                <input type="password" name="mdp" class="form-control" id="mdp" required>
+            </div>
+            <button type="submit" name="valider" class="btn btn-primary btn-block">Se connecter</button>
         </form>
-    </body>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
 <!-- 
 👋 Bonjour et bienvenue dans cette nouvelle vidéo ! Aujourd'hui je vais vous montrer comment créer un espace d'administration complet en PHP & MySQL avec la possibilité de se connecter en tant qu'administrateur, d'afficher les membres du site, de bannir un membre, de publier un article et de supprimer ou modifier un article !
