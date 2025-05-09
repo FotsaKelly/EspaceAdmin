@@ -18,5 +18,8 @@ if(!$_SESSION['mdp']){
     <p><a href="membres.php"> Afficher les membres</a></p>
     <p><a href="publier-article.php">Publier un nouvel article</a></p>
     <p><a href="articles.php"> Afficher tous les articles</a></p>
+    <a href="connexion.php">
+            <button type="button">Retour</button>
+        </a>
 </body>
 </html>

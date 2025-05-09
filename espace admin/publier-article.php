@@ -14,6 +14,7 @@ if(isset($_POST['envoi'])){
         echo"L'article a ete bien envoyer";
    }else{
     echo"Veuillez completer tout les champs...";
+    
    } 
 }
 
@@ -33,6 +34,9 @@ if(isset($_POST['envoi'])){
         <textarea name="contenu" ></textarea>
         <br>
         <input type="submit" name="envoi">
+        <a href="index.php">
+            <button type="button">Retour</button>
+        </a>
 
      </form>
     

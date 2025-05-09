@@ -22,10 +22,31 @@ if(!$_SESSION['mdp']){
         $recupUser = $bdd->query('SELECT * FROM membres');
         while($user = $recupUser->fetch()){
             ?>
-            <p><?= $user['pseudo']; ?> <a href="bannir.php?id=<?= $user['id']; ?>">Bannir le membre</a></p>
+            <div>
+                <p><?=$user['pseudo'];?></p>
+                <a href="bannir.php?id=<?= $user['id']; ?>">
+                    <button>Bannir le membre</button>
+                </a>
+                <a href="modifier-membre.php?id=<?= $user['id'];?>">
+                    <button>Modifier un membre</button>
+                </a>
+            </div>
+            
             <?php
         }
+        
     ?>
+    <br><br><br><br>
+    <?php ?>
+    <div>
+    <a href="ajouter-membre.php?id=<?= $user['id'];?>">
+        <button>Ajouter un membre</button>
+    </a>
+    <a href="index.php">
+            <button type="button">Retour</button>
+    </a>
+</div>
+<?php ?>
     <!-- Fin affichage des membres-->
 </body>
 </html>
