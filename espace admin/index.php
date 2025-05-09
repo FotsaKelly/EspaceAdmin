@@ -1,10 +1,9 @@
 <?php
 session_start();
-if(!$_SESSION['mdp']){
-    header('Location: connexion.php' );
+if (!$_SESSION['mdp'] || !empty($_SESSION['mdp'])) {
+    header('Location: connexion.php');
+    exit(); 
 }
-
-
 ?>
 
 <!DOCTYPE html>
